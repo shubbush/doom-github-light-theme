@@ -76,7 +76,9 @@
    (modeline-bg-inactive-l (doom-darken bg-alt 0.1)))
 
   ;;;; Base theme face overrides
-  ((lazy-highlight  :background "#fff2be")
+  (((font-lock-comment-face &override)
+    :slant 'italic)
+   (lazy-highlight  :background "#fff2be")
    ((line-number &override) :foreground grey2)
    ((line-number-current-line &override) :foreground ln-curr-line)
    (mode-line
@@ -94,6 +96,8 @@
    ;;;; ivy-posframe
    (ivy-posframe :background bg-alt)
    (ivy-posframe-border :background base1)
+   ;;;; highlight-numbers
+   (highlight-numbers-number :foreground violet :weight 'normal)
    ;;;; solaire-mode
    (solaire-hl-line-face
     :background modeline-bg-l
