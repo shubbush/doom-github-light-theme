@@ -113,9 +113,10 @@
     ;;;; neotree
     (custom-set-faces
      '(neo-root-dir-face ((t (:background "#f6f8fa" :style 'semi-bold))))
-     '(neo-header-height 14)
-     '(neo-header-face ((t (:background "#f6f8fa"))))
-     '(neo-banner-face ((t (:background "#f6f8fa"))))
+     )
+    ;;;; org
+    (custom-set-faces
+     '(org-table ((t (:foreground "#032F62"))))
      )
 
 ;;; doom-github-light-theme.el ends here
