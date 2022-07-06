@@ -1,13 +1,13 @@
-# About
+## About
 
-GitHub light theme for Doom Emacs. 
+Light theme with balanced contrast for Doom Emacs based on GitHub colors. 
 WIP
 
-# Installation 
+## Installation 
 
 Copy `doom-github-light-theme.el` to the `~/.doom.d./themes`
 
-# Screenshots
+## Screenshots
 
 ![screenshot](./screenshots/screenshot.png)
 
