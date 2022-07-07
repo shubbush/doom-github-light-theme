@@ -8,7 +8,7 @@
   ;; name        default   256       16
   ((bg         '("#ffffff" nil       nil ))
    (bg-alt     '("#f6f8fa" nil       nil ))
-   (base0      '("#fafafa" "#dfdfdf" nil ))
+   (base0      '("#ffffff" "#dfdfdf" nil ))
    (base1      '("#f5f5f5" "#979797" nil ))
    (base2      '("#eeeeee" "#6b6b6b" nil ))
    (base3      '("#e0e0e0" "#525252" nil ))
@@ -65,14 +65,14 @@
 
    ;; custom categories
    (hidden     `(,(car bg) "black" "black"))
-   (-modeline-pad 4)
+   (-modeline-pad 1)
 
    (modeline-fg     nil)
    (modeline-fg-alt base5)
 
-   (modeline-bg bg-alt)
+   (modeline-bg bg)
    (modeline-bg-l bg-alt)
-   (modeline-bg-inactive   `(,(car bg-alt) ,@(cdr base1)))
+   (modeline-bg-inactive   bg)
    (modeline-bg-inactive-l (doom-darken bg-alt 0.1)))
 
   ;;;; Base theme face overrides
@@ -83,7 +83,7 @@
    ((line-number-current-line &override) :foreground ln-curr-line)
    (mode-line
     :background modeline-bg :foreground modeline-fg
-    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg)))
+    :box `(:line-width ,-modeline-pad :color ,vertical-bar))
    (mode-line-inactive
     :background modeline-bg-inactive :foreground modeline-fg-alt
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive)))
@@ -99,9 +99,9 @@
    ;;;; highlight-numbers
    (highlight-numbers-number :foreground violet :weight 'normal)
    ;;;; solaire-mode
-   (solaire-hl-line-face
-    :background modeline-bg-l
-    )
+   ;;;; (solaire-hl-line-face
+   ; :background modeline-bg-l
+    ;)
    (solaire-mode-line-face
     :inherit 'mode-line
     :background modeline-bg-l
@@ -110,10 +110,6 @@
     :inherit 'mode-line-inactive
     :background modeline-bg-inactive-l
     )))
-    ;;;; neotree
-    (custom-set-faces
-     '(neo-root-dir-face ((t (:background "#f6f8fa" :style 'semi-bold))))
-     )
     ;;;; org
     (custom-set-faces
      '(org-table ((t (:foreground "#032F62"))))
