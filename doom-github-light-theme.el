@@ -48,12 +48,12 @@
    (doc-comments   grey)
    (constants      blue)
    (functions      red)
-   (keywords       blue)
+   (keywords       red)
    (methods        teal)
    (operators      red)
    (type           orange)
    (strings        dark-blue)
-   (variables      blue)
+   (variables      fg)
    (numbers        red)
    (region         "#dbe9f9" )
    (error          red)
@@ -114,5 +114,8 @@
     (custom-set-faces
      '(org-table ((t (:foreground "#032F62"))))
      )
+    ;;;; treemacs
+    (custom-set-faces
+     '(treemacs-root-face ((t (:foreground "#24292f" :bold f :height 1.1)))))
 
 ;;; doom-github-light-theme.el ends here
